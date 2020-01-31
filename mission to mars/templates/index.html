@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mars Data</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+    </head>
+
+    <body>
+      <div class="jumbotron text-center">
+          <h1>Some facts abour Mars!</h1>
+          <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape!</a></p>
+        </div>
+      <div class= "container text-center">
+          <div class="row ml-5 mt-5 mr-5 mb-5">
+              <div class="col-lg-12 mb-6">
+                  <h2>Here is the most up to date information about the red planet: </h2>
+                  <h3> {{ sd.latest_title }} </h3>
+                  <p>{{ sd.latest_paragraph }}</p>
+              </div>
+          </div>
+      </div>
+      <div class="container text-center">
+          <div class="row text-center ml-5 mt-5 mr-5 mb-5">
+              <div class="col-lg-6 mb-6">
+                  <h2>
+                      Featured Mars Image!
+                  </h2>
+                  <a href = {{sd.featured_img}}></a>
+                <img class="img-responsive" src= {{sd.featured_img}}>
+              </div>
+            <div class="col-lg-6 mb-6">
+                <h2>Current Weather on Mars</h2> 
+                    <p>
+                        {{sd.latest_tweet}}
+                    </p>
+            </div>
+            <div>
+                <h2>Mars Facts in Table Form</h2>
+                <table>
+                    {{sd.final_table1}}
+                </table>
+            </div>
+          </div>
+      </div>
+
+        <p>Pictures of four hemispheres
+            <img src = {{sd.hemisphere_image_urls}}>
+        </p>
+        </div>
+        
+      </div>
+      </div>
+
+
+    </body>
+        
+</html>
